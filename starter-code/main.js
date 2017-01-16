@@ -6,11 +6,9 @@ cardFour ="king";
 var cards = [cardOne, cardTwo, cardThree, cardFour];
 var cardsInPlay = [];
 var cardElement;
-
-
-var createCards = function(cards){
 	var gameBoard = document.getElementById('game-board');
 
+var createCards = function(cards){
 	for (var i = 0; i < cards.length; i++) {
 		cardElement = document.createElement('div');
 		cardElement.className = "card";
@@ -46,7 +44,7 @@ var isTwoCards = function() {
 	} else {
 		this.innerHTML = "<img src='http://i.imgur.com/v6buNt2.png'>"; //queen
 	}
-	
+
 	  // if you have two cards in play, check for a match
   if (cardsInPlay.length === 2) {
 
@@ -60,3 +58,4 @@ var isTwoCards = function() {
 }
 
 createCards(cards);
+createBoard();
